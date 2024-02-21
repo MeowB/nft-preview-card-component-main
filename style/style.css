@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Outfit;
+}
+
+body {
+  background-color: #0d192b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: #14253d;
+  max-width: 400px;
+  border-radius: 15px;
+  color: #8bacda;
+}
+main .cube, main .image {
+  position: relative;
+  max-width: 350px;
+  border-radius: 10px;
+}
+main .image {
+  margin: 0 25px;
+  margin-top: 25px;
+}
+main .image:hover {
+  cursor: pointer;
+  background-image: url(../images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 255, 247, 0.8);
+  z-index: 1;
+}
+main .image:hover .cube {
+  opacity: 0.2;
+}
+main h1 {
+  margin: 25px;
+  font-size: 26px;
+}
+main h1 a {
+  text-decoration: none;
+  color: white;
+}
+main h1 a:hover {
+  color: #00fff7;
+}
+main p {
+  margin: 0 25px;
+}
+main .info {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 25px;
+  border-bottom: 1px solid #2f415b;
+  padding-bottom: 15px;
+}
+main .info .time, main .info .value {
+  display: flex;
+  margin-top: 25px;
+}
+main .info .time img, main .info .value img {
+  width: auto;
+  height: 20px;
+}
+main .info .time p, main .info .value p {
+  margin-left: 10px;
+}
+main .info .value {
+  color: #00fff7;
+}
+main .creator {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 25px;
+}
+main .creator a {
+  color: white;
+  text-decoration: none;
+}
+main .creator a:hover {
+  color: #00fff7;
+}
+main .creator img {
+  width: auto;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 375px) {
+  main {
+    width: 90%;
+  }
+  main .cube {
+    width: calc(90% - 15px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

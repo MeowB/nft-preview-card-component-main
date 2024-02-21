@@ -1,0 +1,144 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Overpass:wght@400;700&display=swap');
+
+// COLOR
+
+// primary
+
+$c-soft-blue: hsl(215, 51%, 70%);
+$c-cyan: hsl(178, 100%, 50%);
+
+// neutral
+
+$c-dark-blue-mainBG: hsl(217, 54%, 11%);
+$c-dark-blue-cardBG: hsl(216, 50%, 16%);
+$c-dark-blue-line: hsl(215, 32%, 27%);
+$c-white: hsl(0, 0%, 100%);
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Outfit;
+}
+
+body {
+	background-color: $c-dark-blue-mainBG;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	background-color: $c-dark-blue-cardBG;
+	max-width: 400px;
+	border-radius: 15px;
+	color: $c-soft-blue;
+
+	.cube, .image {
+		position: relative;
+		max-width: 350px;
+		border-radius: 10px;
+	}
+
+	.image {
+		margin: 0 25px;
+		margin-top: 25px;
+	}
+
+
+	.image:hover {
+		cursor: pointer;
+		background-image: url(../images/icon-view.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: rgba(0, 255, 247, 0.8);
+		z-index: 1;
+
+		.cube {
+			opacity: 0.2;
+		}
+	}
+
+
+	h1 {
+		margin: 25px;
+		font-size: 26px;
+
+		a {
+			text-decoration: none;
+			color: $c-white;
+		}
+
+		a:hover {
+			color: $c-cyan;
+		}
+	}
+
+	p {
+		margin: 0 25px;
+	}
+
+	.info {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 25px;
+		border-bottom: 1px solid $c-dark-blue-line;
+		padding-bottom: 15px;
+
+		.time, .value {
+			display: flex;
+			margin-top: 25px;
+			img {
+				width: auto;
+				height: 20px;
+			}
+	
+			p {
+				margin-left: 10px;
+			}
+		}
+
+		.value {
+			color: $c-cyan;
+		}
+	}
+
+
+	.creator {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		margin: 20px 25px;
+
+		a {
+			color: $c-white;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $c-cyan	;
+		}
+
+		img {
+			width: auto;
+			height: 40px;
+			border: 1px solid $c-white;
+			border-radius: 50%;
+		}
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+}
+
+@media only screen and (max-width: 375px) {
+	main {
+		width: 90%;
+		.cube {
+			width: calc(90%  - 15px);
+		}
+	}
+}
